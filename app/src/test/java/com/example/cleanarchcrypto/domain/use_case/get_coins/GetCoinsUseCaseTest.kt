@@ -29,7 +29,7 @@ class GetCoinsUseCaseTest {
     @Test
     fun `invoke - should return loading and success`() = runBlocking {
         // Arrange
-        val mockCoinList = CommonObject().mockCoinList
+        val mockCoinList = CommonObject.mockCoinList
         coEvery { mockRepository.getCoins() } returns mockCoinList
 
         // Act

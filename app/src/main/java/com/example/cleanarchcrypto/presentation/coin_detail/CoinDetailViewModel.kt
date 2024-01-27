@@ -11,11 +11,12 @@ import kotlinx.coroutines.flow.onEach
 import androidx.compose.runtime.State
 import androidx.lifecycle.SavedStateHandle
 import com.example.cleanarchcrypto.common.Constants
+import com.example.cleanarchcrypto.domain.use_case.interfaces.IGetCoinUseCase
 import javax.inject.Inject
 
 @HiltViewModel
 class CoinDetailViewModel @Inject constructor(
-    private val getCoinUseCase: GetCoinUseCase,
+    private val getCoinUseCase: IGetCoinUseCase,
     savedStateHandle: SavedStateHandle
 ) : ViewModel() {
 

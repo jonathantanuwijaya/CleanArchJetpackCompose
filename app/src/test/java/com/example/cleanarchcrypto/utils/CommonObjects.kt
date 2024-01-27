@@ -5,7 +5,7 @@ import com.example.cleanarchcrypto.data.remote.dto.CoinDto
 import com.example.cleanarchcrypto.data.remote.dto.Links
 import com.example.cleanarchcrypto.data.remote.dto.Whitepaper
 
-class CommonObject {
+object CommonObject {
 
     val mockCoinList = listOf<CoinDto>(
         CoinDto(
