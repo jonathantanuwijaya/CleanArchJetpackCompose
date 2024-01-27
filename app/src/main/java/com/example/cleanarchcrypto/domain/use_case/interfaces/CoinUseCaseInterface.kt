@@ -6,7 +6,7 @@ import com.example.cleanarchcrypto.domain.model.CoinDetail
 import kotlinx.coroutines.flow.Flow
 
 interface IGetCoinsUseCase {
-    suspend operator fun invoke(): Flow<Resource<List<Coin>>>
+     operator fun invoke(): Flow<Resource<List<Coin>>>
 }
 
 interface IGetCoinUseCase {

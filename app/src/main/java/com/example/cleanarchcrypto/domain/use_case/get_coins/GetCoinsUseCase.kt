@@ -15,7 +15,7 @@ import javax.inject.Inject
 class GetCoinsUseCase @Inject constructor(
     private val repository: CoinRepository
 ) : IGetCoinsUseCase {
-    override suspend operator fun invoke(): Flow<Resource<List<Coin>>> = flow {
+    override operator fun invoke(): Flow<Resource<List<Coin>>> = flow {
         try {
             emit(Resource.Loading<List<Coin>>())
             val coins = repository.getCoins().map { it.toCoin() }

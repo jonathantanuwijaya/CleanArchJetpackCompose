@@ -8,8 +8,6 @@ import com.example.cleanarchcrypto.common.Resource
 import com.example.cleanarchcrypto.domain.model.Coin
 import com.example.cleanarchcrypto.domain.use_case.interfaces.IGetCoinsUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.flow.launchIn
-import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -24,10 +22,10 @@ class CoinListViewModel @Inject constructor(private val getCoinsUseCase: IGetCoi
         getCoins()
     }
 
-    fun getCoins() {
+    private fun getCoins() {
         viewModelScope.launch {
             try {
-                getCoinsUseCase.invoke().collect { result ->
+                getCoinsUseCase().collect { result ->
                     handleCoinsResult(result)
                 }
             } catch (e: Exception) {
