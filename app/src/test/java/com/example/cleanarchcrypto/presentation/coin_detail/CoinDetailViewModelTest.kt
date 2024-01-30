@@ -4,6 +4,7 @@ import androidx.lifecycle.SavedStateHandle
 import com.example.cleanarchcrypto.common.Resource
 import com.example.cleanarchcrypto.data.remote.dto.toCoinDetail
 import com.example.cleanarchcrypto.domain.model.CoinDetail
+import com.example.cleanarchcrypto.domain.use_case.get_coin.GetCoinUseCase
 import com.example.cleanarchcrypto.domain.use_case.interfaces.IGetCoinUseCase
 import com.example.cleanarchcrypto.utils.CommonObject
 import com.example.cleanarchcrypto.utils.MainDispatcherRule
@@ -29,7 +30,7 @@ class CoinDetailViewModelTest {
     private lateinit var savedStateHandle: SavedStateHandle
 
     private lateinit var viewModel: CoinDetailViewModel
-    private lateinit var mockGetCoinUseCase: IGetCoinUseCase
+    private lateinit var mockGetCoinUseCase: GetCoinUseCase
 
     @Before
     fun setUp() {

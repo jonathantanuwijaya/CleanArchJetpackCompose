@@ -12,6 +12,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Alignment.Companion.CenterVertically
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
@@ -27,12 +28,12 @@ fun CoinDetailScreen(
     Box(modifier = Modifier.fillMaxSize()) {
         state.coin?.let { coin ->
             LazyColumn(
-                modifier = Modifier.fillMaxSize(),
+                modifier = Modifier.fillMaxSize().testTag("lazydetail"),
                 contentPadding = PaddingValues(20.dp)
             ) {
                 item {
                     Row(
-                        modifier = Modifier.fillMaxWidth(),
+                        modifier = Modifier.fillMaxWidth().testTag("coin_detail_title"),
                         horizontalArrangement = Arrangement.SpaceBetween
                     ) {
                         Text(

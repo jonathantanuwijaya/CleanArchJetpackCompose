@@ -2,6 +2,12 @@
 <project version="4">
   <component name="deploymentTargetDropDown">
     <value>
+      <entry key="CoinDetailScreenKtTest">
+        <State />
+      </entry>
+      <entry key="CoinListScreenKtTest">
+        <State />
+      </entry>
       <entry key="app">
         <State>
           <targetSelectedWithDropDown>
@@ -17,6 +23,15 @@
           </targetSelectedWithDropDown>
           <timeTargetWasSelectedWithDropDown value="2024-01-09T12:08:16.405432Z" />
         </State>
+      </entry>
+      <entry key="click_and_show_coin_detail()">
+        <State />
+      </entry>
+      <entry key="coin_detail_is_visible()">
+        <State />
+      </entry>
+      <entry key="coin_list_is_visible()">
+        <State />
       </entry>
     </value>
   </component>

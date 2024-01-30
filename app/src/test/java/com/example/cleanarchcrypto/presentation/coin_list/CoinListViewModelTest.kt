@@ -3,6 +3,7 @@ package com.example.cleanarchcrypto.presentation.coin_list
 import com.example.cleanarchcrypto.common.Resource
 import com.example.cleanarchcrypto.data.remote.dto.toCoin
 import com.example.cleanarchcrypto.domain.model.Coin
+import com.example.cleanarchcrypto.domain.use_case.get_coins.GetCoinsUseCase
 import com.example.cleanarchcrypto.domain.use_case.interfaces.IGetCoinsUseCase
 import com.example.cleanarchcrypto.utils.CommonObject
 import com.example.cleanarchcrypto.utils.MainDispatcherRule
@@ -25,7 +26,7 @@ class CoinListViewModelTest {
     val mainDispatcherRule = MainDispatcherRule()
 
     private lateinit var viewModel: CoinListViewModel
-    private lateinit var mockGetCoinsUseCase: IGetCoinsUseCase
+    private lateinit var mockGetCoinsUseCase: GetCoinsUseCase
 
     @Before
     fun setUp() {
